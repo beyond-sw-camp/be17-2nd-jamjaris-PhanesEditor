@@ -1,4 +1,9 @@
 <script setup>
+import api from '@/api/code/code_index.js';
+
+const runApi = async () => {
+    await api.codeRun()
+}
 </script>
 
 
@@ -9,7 +14,7 @@
         </div>
 
         <div class="navbar-right">
-            <button class="run-button">Run Code</button>
+            <button class="run-button" @click="runApi()">Run Code</button>
 
             <!-- <svg class="settings-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path
