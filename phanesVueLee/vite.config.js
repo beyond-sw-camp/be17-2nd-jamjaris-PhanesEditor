@@ -12,7 +12,9 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      crypto: 'crypto-browserify',   // 🔑 crypto 모듈 polyfill
+      stream: 'stream-browserify',   // 🔑 stream polyfill (crypto 내부에서 필요할 수 있음)
     },
   },
   server: {
@@ -23,7 +25,6 @@ export default defineConfig({
         changeOrigin: true,
         secure: true,
         rewrite: (path) => path.replace(/^\/api\/v1/, '')
-        
       }
     }
   }
