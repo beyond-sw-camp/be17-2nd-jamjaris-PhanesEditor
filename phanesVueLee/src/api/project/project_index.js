@@ -58,7 +58,7 @@ const fetchAllProjects = async () => {
 
     // if (userId) {
     //     url += `?userId=${encodeURIComponent(userId)}`;
-    // } 뭐 이런식으로 url을 변경해서 get방식으로 사용할 수도 있다고 합니다.
+    // } 뭐 이런식으로 url을 변경해서 get방식으로 사용할 수도 있다고 합니다. ...
 
     await api.get(url)
         .then((res) => {
