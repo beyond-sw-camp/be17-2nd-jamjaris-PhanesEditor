@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'https://api.gomorebi.kro.kr',
+    // baseURL: process.env.VITE_API_BASE_URL,
+    baseURL: "http://localhost:8080",
     timeout: 5000,
     withCredentials: true
 
